@@ -1,12 +1,27 @@
+{% set title = 'Test page - Amoxicillin' %}
 {% extends "includes/templates/page.html"%}
+
+{% block breadcrumb %}
+    <div class="nhsuk-breadcrumb">
+        <div class="nhsuk-o-width-container">
+            <ol>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Medicines</a></li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
 
 {% block header %}
     <h1>Amoxicillin</h1>
+    <div class="reading-width">
+        <p class="nhsuk-body-l nhsuk-page-intro">Amoxicillin is an antibiotic. It's used to treat bacterial infections, such as chest infections (including pneumonia), dental abscesses and&nbsp;urinary tract infections (UTIs).</p>
+    </div>
 {% endblock %}
 
 {% block sidebar %}
-    <h2 class="nhsuk-heading-xs test">Page contents</h2>
-    <ol class="nhsuk-list-nav test">
+    <h2 class="nhsuk-heading-xs">Page contents</h2>
+    <ol class="nhsuk-list-nav">
         <li><a href="#about">About amoxicillin</a></li>
         <li><a href="#key-facts">Key facts</a></li>
         <li><a href="#who-can-take">Who can and can't take amoxicillin</a></li>
@@ -26,8 +41,7 @@
       <section class="o-list-sections__section o-section nhsuk-page-content__section-one">
             <h2 class="o-section__header" id="about">1. About amoxicillin</h2>
 
-        <p>Amoxicillin is an antibiotic.</p>
-<p>It's used to treat bacterial infections, such as <a href="http://www.nhs.uk/conditions/Chest-infection-adult/Pages/Introduction.aspx">chest infections</a> (including <a href="http://www.nhs.uk/conditions/Pneumonia/Pages/Introduction.aspx">pneumonia</a>), <a href="http://www.nhs.uk/conditions/Dental-abscess/Pages/Introduction.aspx">dental abscesses</a> and&nbsp;<a href="https://www.nhs.uk/conditions/Urinary-tract-infection-adults/Pages/Introduction.aspx">urinary tract infections</a> (UTIs).</p>
+       
 <p>It's used in children, often to treat <a href="https://beta.nhs.uk/conditions/ear-infections">ear infections</a> and chest infections.</p>
 <p>The medicine is only available on prescription. It comes as capsules or as a liquid that you drink. It's also given by injection, but this is usually only done in hospital.</p>
       </section>
@@ -181,7 +195,7 @@
 <section class="o-list-sections__section o-section">
   <h2 class="o-section__header" id="pregnancy-breastfeeding">7. Pregnancy and breastfeeding</h2>
 <p>It's usually safe to take amoxicillin during pregnancy and while breastfeeding.</p>
-<p><span class="c-callout__alert" role="alert">For safety, tell your doctor if you're trying to get pregnant, are already pregnant or if you're breastfeeding.</span></p>
+<div class="nhsuk-c-callout__warning" role="alert"><p>For safety, tell your doctor if you're trying to get pregnant, are already pregnant or if you're breastfeeding.</p></div>
 </section>
 </li>
 
