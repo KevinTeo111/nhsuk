@@ -2,20 +2,4 @@
 
 ## Introduction
 
-Component for callouts.
-
-## Guidance
-
-TBC
-
-## Usage
-
-TBC
-
-#### Markup
-
-TBC
-
-## Installation
-
-TBC
+Component for the Warning Callout, Keypoints and Do & Don't list.
