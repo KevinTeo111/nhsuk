@@ -1,5 +1,5 @@
-# Care Card component
+# Care Cards
 
 ## Introduction
 
-Component for the Care Cards.
+## Guidance
