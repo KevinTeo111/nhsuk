@@ -36,7 +36,7 @@ Find out when to use the header component in the [Digital service manual](http:/
 
     <div class="nhsuk-header__content">
       <div class="nhsuk-header__menu">
-        <button class="nhsuk-header__menu-toggle" aria-controls="c-nav-primary" aria-label="Open menu">Menu</button>
+        <button class="nhsuk-header__menu-toggle" aria-controls="nhsuk-header__navigation" aria-label="Open menu">Menu</button>
       </div>
 
       <div class="nhsuk-header__search">
@@ -146,7 +146,7 @@ Find out when to use the header component in the [Digital service manual](http:/
 
     <div class="nhsuk-header__content">
       <div class="nhsuk-header__menu nhsuk-header__menu--only">
-        <button class="nhsuk-header__menu-toggle" aria-controls="c-nav-primary" aria-label="Open menu">Menu</button>
+        <button class="nhsuk-header__menu-toggle" aria-controls="nhsuk-header__navigation" aria-label="Open menu">Menu</button>
       </div>
     </div>
   </div>
@@ -226,7 +226,7 @@ Find out when to use the header component in the [Digital service manual](http:/
 
     <div class="nhsuk-header__content">
       <div class="nhsuk-header__menu">
-        <button class="nhsuk-header__menu-toggle" aria-controls="c-nav-primary" aria-label="Open menu">Menu</button>
+        <button class="nhsuk-header__menu-toggle" aria-controls="nhsuk-header__navigation" aria-label="Open menu">Menu</button>
       </div>
 
       <div class="nhsuk-header__search">
@@ -289,48 +289,42 @@ Find out when to use the header component in the [Digital service manual](http:/
 [Preview the header with logo only]()
 
 
-### Macro
+### Nunjucks Macro
 
 ```
 {% from 'components/header/macro.njk' import header %}
 
-{% set primaryLinks = [
+{{ header({
+  "showNav": "true",
+  "showSearch": "true",
+  "primaryLinks": [
     {
-      'url'  : 'https://www.nhs.uk/conditions',
-      'label' : 'Health A-Z'
+      "url"  : "https://www.nhs.uk/conditions",
+      "label" : "Health A-Z"
     },
     {
       'url' : 'https://www.nhs.uk/live-well/',
-      'label' : 'Live Well'        
+      'label' : 'Live Well'
     },
     {
       'url'  : 'https://www.nhs.uk/conditions/social-care-and-support/',
-      'label' : 'Care and support'    
+      'label' : 'Care and support'
     },
     {
       'url'  : 'https://www.nhs.uk/news/',
-      'label' : 'Health news'    
+      'label' : 'Health news'
     },
     {
       'url' : 'https://www.nhs.uk/service-search',
       'label' : 'Services near you'
     }
   ]
-%}
-
-{{ header(primaryLinks) }}
+}) }}
 ```
 
+## Dependencies
 
-#### Macro usage example
-
-```
-<ul>
-  {% for item in primaryLinks %}
-    <li><a href="{{item.url}}">{{item.label}}</a></li>
-  {% endfor %}
-</ul>
-```
+Javascript is required for the toggling of the navigation and search form. Also, if using the autosuggestion functionality that the NHS.UK site uses then the typeahead javascript is required, which has a dependency on jQuery which must also be included.
 
 
 ## Contribution
