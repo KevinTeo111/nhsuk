@@ -6,29 +6,58 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       {{ select({
-        "id": "select-2",
-        "name": "select-2",
+        "id": "location",
+        "name": "location",
         "label": {
-          "text": "Label text goes here"
+          "text": "Choose location"
         },
         "hint": {
-          "text": "Hint text goes here"
+          "text": "This can be different to where you went before"
         },
         "errorMessage": {
-          "text": "Error message goes here"
+          "text": "Select a location"
         },
         "items": [
           {
-            "value": 1,
-            "text": "NHS.UK frontend option 1"
+            "value": "choose",
+            "text": "Choose location",
+            "selected": true
           },
           {
-            "value": 2,
-            "text": "NHS.UK frontend option 2"
+            "value": "eastmidlands",
+            "text": "East Midlands"
           },
           {
-            "value": 3,
-            "text": "NHS.UK frontend option 3"
+            "value": "eastofengland",
+            "text": "East of England"
+          },
+          {
+            "value": "london",
+            "text": "London"
+          },
+          {
+            "value": "northeast",
+            "text": "North East"
+          },
+          {
+            "value": "northwest",
+            "text": "North West"
+          },
+          {
+            "value": "southeast",
+            "text": "South East"
+          },
+          {
+            "value": "southwest",
+            "text": "South West"
+          },
+          {
+            "value": "westmidlands",
+            "text": "West Midlands"
+          },
+          {
+            "value": "yorkshire",
+            "text": "Yorkshire and the Humber"
           }
         ]
       }) }}
